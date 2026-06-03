@@ -1,3 +1,9 @@
+# frontend
+
+React UI for the kitefs-examples demo. Collects listing attributes (area, rooms, build year, town) from the user and displays the recommended sale price returned by the backend.
+
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
