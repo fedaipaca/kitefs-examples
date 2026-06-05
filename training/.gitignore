@@ -220,3 +220,5 @@ __marimo__/
 .streamlit/secrets.toml
 
 data/
+feature_store/data/
+feature_store/registry.json
