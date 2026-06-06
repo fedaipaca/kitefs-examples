@@ -912,7 +912,7 @@ requires-dist = [
     { name = "kitefs", extras = ["aws"], editable = "../../kitefs" },
     { name = "pandas", specifier = ">=3.0.3" },
     { name = "pyarrow", specifier = ">=24.0.0" },
-    { name = "scikit-learn", specifier = ">=1.8.0" },
+    { name = "scikit-learn", specifier = "==1.8.0" },
 ]
 
 [[package]]
