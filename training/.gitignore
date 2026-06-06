@@ -222,3 +222,14 @@ __marimo__/
 data/
 feature_store/data/
 feature_store/registry.json
+
+
+# ML Models and serialized objects
+*.pkl
+*.joblib
+*.h5
+*.pb
+*.onnx
+*.pt
+*.pth
+models/
