@@ -10,6 +10,9 @@ resolution-markers = [
     "python_full_version < '3.14' and sys_platform != 'emscripten' and sys_platform != 'win32'",
 ]
 
+[options]
+prerelease-mode = "allow"
+
 [[package]]
 name = "appnope"
 version = "0.1.4"
@@ -301,38 +304,22 @@ wheels = [
 
 [[package]]
 name = "kitefs"
-version = "0.1.0"
-source = { editable = "../../kitefs" }
+version = "0.3.0a0"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
     { name = "pandas" },
     { name = "pyarrow" },
     { name = "pyyaml" },
 ]
+sdist = { url = "https://files.pythonhosted.org/packages/75/df/60f384f70660d52236f1729d852bf706526273525ac831c51318ad2a5993/kitefs-0.3.0a0.tar.gz", hash = "sha256:b3b51822d23f994fd835ac23cf1cfd83039e93d407270a6316b8e1271f1d07ba", size = 56675, upload-time = "2026-06-07T11:12:24.8Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ca/5b/3d550080cb7583c0d8d18016b8bd7540de784b5b6b6fac3bf7ec9b4df736/kitefs-0.3.0a0-py3-none-any.whl", hash = "sha256:4b1e96640885a35c08d0b6621965c3d08a993f75656bd4e888dca83a2b9095b5", size = 73648, upload-time = "2026-06-07T11:12:23.505Z" },
+]
 
 [package.optional-dependencies]
 aws = [
     { name = "boto3" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "boto3", marker = "extra == 'aws'", specifier = ">=1.43.18" },
-    { name = "click", specifier = ">=8.4.0" },
-    { name = "pandas", specifier = ">=3.0.3" },
-    { name = "pyarrow", specifier = ">=24.0.0" },
-    { name = "pyyaml", specifier = ">=6.0.3" },
-]
-provides-extras = ["aws"]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "boto3", specifier = ">=1.43.18" },
-    { name = "moto", extras = ["s3", "dynamodb"], specifier = ">=5.0.0" },
-    { name = "pyright", specifier = ">=1.1.409" },
-    { name = "pytest", specifier = ">=9.0.3" },
-    { name = "pytest-bdd", specifier = ">=8.1.0" },
-    { name = "ruff", specifier = ">=0.15.13" },
 ]
 
 [[package]]
@@ -919,7 +906,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "ipykernel", specifier = ">=7.2.0" },
-    { name = "kitefs", extras = ["aws"], editable = "../../kitefs" },
+    { name = "kitefs", extras = ["aws"], specifier = ">=0.1.0" },
     { name = "pandas", specifier = ">=3.0.3" },
     { name = "pyarrow", specifier = ">=24.0.0" },
     { name = "python-dotenv", specifier = ">=1.2.2" },

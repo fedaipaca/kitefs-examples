@@ -14,5 +14,8 @@ dependencies = [
 ]
 
 
-[tool.uv.sources]
-kitefs = { path = "../../kitefs", editable = true }
+# [tool.uv.sources]
+# kitefs = { path = "../../kitefs", editable = true }
+
+[tool.uv]
+prerelease = "allow"
