@@ -50,6 +50,8 @@ def recommend_price(request: PriceRequest) -> dict[str, float]:
             detail=f"No market data available for town_id={request.town_id}.",
         )
 
+    print(market)
+
     feature_row = pd.DataFrame([
         {
             "net_area": request.net_area,
